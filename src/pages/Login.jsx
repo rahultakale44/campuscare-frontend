@@ -28,7 +28,7 @@ function Login() {
       const { token, role } = response.data;
 
       if (role !== "STUDENT") {
-        toast.error("Please use admin login page.");
+        toast.error("Please use administrator access.");
         return;
       }
 
@@ -54,21 +54,19 @@ function Login() {
 
   return (
     <div className="auth-page">
+      <Link to="/admin-login" className="floating-admin-btn">
+        Administrator Access
+      </Link>
+
       <div className="auth-card">
         <h1>Student Login</h1>
         <p>Login or create your CampusCare student account</p>
 
         <div className="login-type-buttons">
-  <button type="button" onClick={handleStudentLogin}>
-    Demo Student Login
-  </button>
-</div>
-
-<div className="admin-access-link">
-  <Link to="/admin-login">
-    Administrator Access →
-  </Link>
-</div>
+          <button type="button" onClick={handleStudentLogin}>
+            Demo Student Login
+          </button>
+        </div>
 
         <form onSubmit={handleLogin} autoComplete="off">
           <input

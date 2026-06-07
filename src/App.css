@@ -1588,3 +1588,36 @@ body{
 .admin-access-link a:hover {
   color: #8b5cf6;
 }
+
+.floating-admin-btn {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 99;
+  padding: 13px 20px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38bdf8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
+  transition: 0.3s ease;
+}
+
+.floating-admin-btn:hover {
+  transform: translateY(-3px);
+  color: white;
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+}
+
+@media (max-width: 600px) {
+  .floating-admin-btn {
+    right: 18px;
+    bottom: 18px;
+    font-size: 12px;
+    padding: 11px 15px;
+  }
+}
