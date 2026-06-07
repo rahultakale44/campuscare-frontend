@@ -341,23 +341,26 @@ function AdminDashboard() {
                     </small>
 
                     {complaint.imageUrl && (
-                      <div className="proof-image-section">
-                        <a
-                          href={complaint.imageUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="view-image-btn"
-                        >
-                          <Image size={16} /> View Proof Image
-                        </a>
+  <div className="proof-image-section">
+    <a
+      href={`https://campuscare-backend-rt14.onrender.com${complaint.imageUrl}`}
+      target="_blank"
+      rel="noreferrer"
+      className="view-image-btn"
+    >
+      <Image size={16} /> View Proof Image
+    </a>
 
-                        <img
-                          src={complaint.imageUrl}
-                          alt="Complaint Proof"
-                          className="complaint-proof-image"
-                        />
-                      </div>
-                    )}
+    <img
+      src={`https://campuscare-backend-rt14.onrender.com${complaint.imageUrl}`}
+      alt="Complaint Proof"
+      className="complaint-proof-image"
+      onError={(e) => {
+        e.target.style.display = "none";
+      }}
+    />
+  </div>
+)}
 
                     {complaint.adminNote && (
                       <div className="admin-note-preview">
