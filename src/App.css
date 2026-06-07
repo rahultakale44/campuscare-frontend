@@ -1571,3 +1571,20 @@ body{
   border-radius: 14px;
   border: 1px solid rgba(56, 189, 248, 0.3);
 }
+
+.admin-access-link {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.admin-access-link a {
+  color: #55d8ff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.admin-access-link a:hover {
+  color: #8b5cf6;
+}

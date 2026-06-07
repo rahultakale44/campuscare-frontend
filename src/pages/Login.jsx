@@ -59,10 +59,16 @@ function Login() {
         <p>Login or create your CampusCare student account</p>
 
         <div className="login-type-buttons">
-          <button type="button" onClick={handleStudentLogin}>
-            Demo Student Login
-          </button>
-        </div>
+  <button type="button" onClick={handleStudentLogin}>
+    Demo Student Login
+  </button>
+</div>
+
+<div className="admin-access-link">
+  <Link to="/admin-login">
+    Administrator Access →
+  </Link>
+</div>
 
         <form onSubmit={handleLogin} autoComplete="off">
           <input
