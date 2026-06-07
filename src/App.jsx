@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import Home from "./Home";
 import Login from "./pages/Login";
+import AdminLogin from "./pages/AdminLogin";
 import Register from "./pages/Register";
 import StudentDashboard from "./pages/StudentDashboard";
 import CreateComplaint from "./pages/CreateComplaint";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
 
         <Route path="/login" element={<Login />} />
+        <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/register" element={<Register />} />
 
         <Route
